@@ -1,29 +1,49 @@
+//================================================
+
+//==> Nombre del programa: Edad de una persona
+//==> Archivo : OrdoñezAndrea-LaEdad.cpp
+//==>Autor: Andrea Ordoñez
+//==>Fecha de elaboración: 2022-05-02
+//==>Fecha ultima actualización: 2022-05-20
+//=================================================
+
+
 #include <iostream>
 using namespace std;
 int main ()
 {
-	int j, p, q, j1, p1, q1, r, t, bc, m, a, d;
-	cout<<"Digite la fecha actual utilizando formato d/m/a: "<<endl;
-	cin>>j>>p>>q;
-	cout<<"Digite su fecha de nacimiento utilizando formato d/m/a: "<<endl;
-	cin>>j1>>p1>>q1;
-	if (j<j1){
-		j=j+30;
-		p=p-1;
-		r=j-j1;
+	int AB_mm, AB_nn, AB_pp, AB_mm1, AB_nn1, AB_pp1, AB_me, AB_ne, AB_pe;
+	cout<<"Digite la fecha actual usando formato dd/mm/yy: "<<endl;
+	cin>>AB_mm>>AB_nn>>AB_pp;
+	cout<<"Digite su fecha de nacimiento usando formato dd/mm/yy: "<<endl;
+	cin>>AB_mm1>>AB_nn1>>AB_pp1;
+
+	if (AB_mm<AB_mm1){
+		AB_mm=AB_mm+30;
+		AB_nn=AB_nn-1;
+		AB_me=AB_mm-AB_mm1;
 	}
 		else {
-			r=j-j1;
+			AB_me=AB_mm-AB_mm1;
 		}
-	if (p<p1){
-		p=p+12;
-		t=t-1;
-		t=p-p1;
+	if (AB_nn<AB_nn1){
+		AB_nn=AB_nn+12;
+		AB_pp=AB_pp-1;
+		AB_ne=AB_nn-AB_nn1;
 	}
 		else {
-			t=p-p1;
+			AB_ne=AB_nn-AB_nn1;
 		}
-	bc=q-q1;
-	cout<<"Usted tiene "<<bc<<" años, "<<t<<" meses "<<"y "<<r<<" dias."<<endl;
+	AB_pe=AB_pp-AB_pp1;
+
+cout<<endl<<"//================================================"<<endl;
+cout<<"//==> Nombre del programa: Edad de una persona"<<endl;
+cout<<"//==> Archivo : OrdoñezAndrea-LaEdad.cpp"<<endl;
+cout<<"//==>Autor: Andrea Ordoñez"<<endl;
+cout<<"//==>Fecha de elaboración: 2022-05-02"<<endl;
+cout<<"//==>Fecha ultima actualización: 2022-05-20"<<endl;
+cout<<"//================================================="<<endl;
+
+	cout<<"Usted tiene "<<AB_pe<<" años, "<<AB_ne<<" meses "<<"y "<<AB_me<<" dias."<<endl;
 	return 0;
 }
